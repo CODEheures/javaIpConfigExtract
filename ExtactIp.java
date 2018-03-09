@@ -40,7 +40,7 @@ public class ExtractIp {
 		if (isWindow) {
 			regexIp = card + ".*?IPv4[\\.\\s]*:\\s(\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})";
 		} else {
-			regexIp = card + ":inet (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})\\s+netmask";
+			regexIp = card + ":.+inet (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})\\s+netmask";
 		}
 		
 		
