@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -46,11 +47,19 @@ public class ExtractIp {
 		Pattern ipPattern = Pattern.compile(regexIp, Pattern.DOTALL | Pattern.CASE_INSENSITIVE);
 		Matcher ipv4Matcher = ipPattern.matcher(config);
 		
+		
+		ArrayList<String> ipv4 = new ArrayList();
 		while (ipv4Matcher.find()) {
-			String ipv4 = ipv4Matcher.group(1);
-			System.out.println("Adresse IPv4 trouvée: " + ipv4);
+			ipv4.add(ipv4Matcher.group(1));
 		}
 		
+		if (ipv4.size()>0) {
+			for (String ip : ipv4) {
+				System.out.println("IPv4 trouvée pour la carte nommée " + card + ": " + ip);
+			}
+		} else {
+			System.out.println("Aucune carte nommée \"" + card + "\" ne possède d'ipv4");
+		}
 		
 	}
 	
@@ -89,3 +98,4 @@ public class ExtractIp {
 	
 
 }
+
