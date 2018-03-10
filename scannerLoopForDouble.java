@@ -22,6 +22,8 @@ public class TestScanner {
 					break;
 				} catch (InputMismatchException e) {
 					System.out.print("Not a number, retry: ");
+					
+					// Cette ligne permet de boucler et demander de relire au clavier avec la même contrainte
 					scanner.next();
 				}
 			}
