@@ -14,7 +14,7 @@ public class ExtractIp {
 	public static void main(String[] args) {
 
 		// Arguments 
-		if (args.length != 1 || (args[0] == "-h" || args[0] == "--help" || args[0] == "help")) {
+		if (args.length != 1 || (args[0].equals("-h") || args[0].equals("--help") || args[0].equals("help"))) {
 			help();
 			System.exit(0);
 		}
