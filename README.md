@@ -1,4 +1,4 @@
-# javaIpConfigExtract
+# javaIpExtract
 Extract IPv4 of a card on window or linux
 
 ## Usage
