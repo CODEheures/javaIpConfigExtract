@@ -1,6 +1,6 @@
 # javaPersonnalsUtils
--Extract IPv4 of a card on window or linux
--scanner loop for a double with . or , separator
+- Extract IPv4 of a card on window or linux
+- scanner loop for a double with . or , separator
 
 ## ExtractIp Usage
 java ExtractIp [cardName]
